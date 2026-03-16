@@ -86,7 +86,6 @@ const ContactDetail = () => {
         } catch (error) {
             toastError(error.message);
         }
-
     }
 
     const toggleDeleteConfirmationModal = (show) => {

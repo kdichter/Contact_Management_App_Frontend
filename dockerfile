@@ -4,6 +4,7 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm ci --legacy-peer-deps
 COPY . .
+RUN echo "VITE_API_URL=" > .env.production
 RUN npm run build
 
 # --- Serve ---
